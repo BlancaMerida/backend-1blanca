@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 class CartManager {
     constructor() {
-        this.rutaArchivo = path.join(__dirname, '../data/carts.json');
+        this.rutaArchivo = path.join(__dirname, '../data/carts.js');
         this.carts = [];
         this.productManager = new ProductManager();
         this.cargarCarritos();

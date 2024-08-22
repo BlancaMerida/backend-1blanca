@@ -1,8 +1,8 @@
-import {Router} from 'express';
-import ProductManager from '../managers/ProductManager.js';
+import express from 'express';
+import ProductManager from '../manager/ProductManager.js';
 
 
-const router = Router();
+const router = express.Router();
 const productManager= new ProductManager();
 
 

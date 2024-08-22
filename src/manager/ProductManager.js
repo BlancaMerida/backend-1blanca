@@ -24,8 +24,8 @@ class ProductManager {
     }
 
     guardarProductos() {
-        const rutaArchivo = path.join(__dirname, '../data/products.json');
-        fs.writeFileSync(rutaArchivo, JSON.stringify(this.products, null, 2));
+        const rutaArchivo = path.join(__dirname, '../data/products.js');
+        fs.writeFileSync(rutaArchivo, JSON.stringify(this.products, null, 5));
     }
 
     inicializarProductos() {
