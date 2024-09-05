@@ -1,0 +1,103 @@
+[
+    {
+        "id": 1,
+        "title": "Kit de Colgantes",
+        "descripcion":"Cadena regulable de 45 a 50cm más dije de estrella con cubic",
+        "price": 1500,
+        "stock": 14,
+        "code": "de01",
+        "category":"cadenas"
+    },
+    {
+        "id": 2,
+        "title": "Collar Men",
+        "descripcion":"Cadena de plata 925 40cm + dije de piedra natural con diamante",
+        "price": 3500,
+        "stock": 10,
+        "code":"de02",
+        "category":"cadenas"
+    },
+    {
+        "id": 3,
+        "title": "Kit de yojas",
+        "descripcion":"Set completo aretes/pulsera/collar acero blanco",
+        "price": 1840,
+        "stock": 5,
+        "code":"de03",
+        "category":"aros"
+    },
+    {
+        "id": 4,
+        "title": "Anillo Flower",
+        "descripcion":"Plata Rose con micropave",
+        "price": 1300,
+        "stock": 8,
+        "code":"de04",
+        "category":"anillos"
+    },
+    {
+        "id": 5,
+        "title": "Aretes Diana",
+        "descripcion":"Aros con cierre huggies de acero dorado, micropave y cubic",
+        "price": 5200,
+        "stock": 9,
+        "code":"de05",
+        "category":"aros"
+    }, 
+    {
+        "id": 6,
+        "title": "Anillo de anne",
+        "descripcion":"Anillo de acero 925 y cubic",
+        "price":2500,
+        "stock": 11,
+        "code":"de06",
+        "category":"anillos"
+    },
+    {
+        "id": 7,
+        "title": "Collas Kids",
+        "descripcion":"Cadena con unicornio y arcoiris - largo 50cm ",
+        "price":2500,
+        "stock": 11,
+        "code":"de07",
+        "category":"cadenas"
+    },
+    {
+        "id": 8,
+        "title": "Collares Surtidas",
+        "descripcion":"Cadena con surtidas de acero dorado - largo 50cm ",
+        "price":3800,
+        "stock": 15,
+        "code":"de08",
+        "category":"cadenas"
+    },
+    {
+        "id": 9,
+        "title": "Dijes Kids",
+        "descripcion":"Dijes kids de acero dorado",
+        "price":4300,
+        "stock": 12,
+        "code":"de09",
+        "category":"cadenas"
+    },
+    {
+        "id": 10,
+        "title": "Kit de Pulseras",
+        "descripcion":"Kit de pulseras especial para regalar acero blanco",
+        "price":6000,
+        "stock": 11,
+        "code":"de10",
+        "category":"anillos"
+
+    },
+    {
+        "id": 11,
+        "title": "Pulsera de hombre",
+        "descripcion":"Pulsera de plata 925",
+        "price":4900,
+        "stock": 8,
+        "code":"de11",
+        "category":"anillos"
+    }
+
+]
