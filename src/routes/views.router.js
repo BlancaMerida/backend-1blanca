@@ -1,5 +1,8 @@
 import { Router } from "express";
- export const router = Router();
+import Product from "../models/product.model.js";
+import Cart from "../models/cart.model.js";
+
+const router = Router();
 
 router.get("/home", async (req, res) => {
     const { limit = 5, page = 1, sort = "", query = "" } = req.query;
