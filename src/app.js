@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-//mongoose.connect('mongodb+srv://mtofalo:mtofalo@cluster0.sjq1qtx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+//mongoose.connect('mongodb+srv://proyecto1:proyect@cluster0.dc0ws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   //  .then(() => {
     //    console.log('Connected to MongoDB Atlas');
     //})
