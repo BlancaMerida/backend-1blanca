@@ -1,11 +1,12 @@
-import { Router } from "express";
-import Product from "../models/product.model.js";
-import Cart from "../models/cart.model.js";
+import { Router } from 'express';
+import Product from '../models/product.model.js';
+import Cart from '../models/cart.model.js';
 
 const router = Router();
 
-router.get("/home", async (req, res) => {
-    const { limit = 5, page = 1, sort = "", query = "" } = req.query;
+// Ruta para la vista de inicio (home)
+router.get('/home', async (req, res) => {
+    const { limit = 5, page = 1, sort = '', query = '' } = req.query;
 
     let filter = {};
     if (query) {
@@ -22,13 +23,13 @@ router.get("/home", async (req, res) => {
     const options = {
         page: parseInt(page, 10),
         limit: parseInt(limit, 10),
-        sort: sort ? { price: sort === "asc" ? 1 : -1 } : {},
+        sort: sort ? { price: sort === 'asc' ? 1 : -1 } : {},
     };
 
     try {
         const result = await Product.paginate(filter, options);
 
-        res.render("home", {
+        res.render('home', {
             products: result.docs,
             totalPages: result.totalPages,
             prevPage: result.prevPage,
@@ -44,17 +45,18 @@ router.get("/home", async (req, res) => {
                 : null,
         });
     } catch (err) {
-        res.status(500).send("error", { error: err.message });
+        res.status(500).send('error', { error: err.message });
     }
 });
 
-router.get("/cart", async (req, res) => {
+//Ruta para la vista de carrito 
+router.get('/cart', async (req, res) => {
     try {
-        const cart = await Cart.findOne().populate("products.product");
-        res.render("cart", { cart: cart ? cart.products : [] });
+        const cart = await Cart.findOne().populate('products.product');
+        res.render('cart', { cart: cart ? cart.products : [] });
     } catch (error) {
         console.error(error);
-        res.status(500).send("Error al obtener el carrito");
+        res.status(500).send('Error al obtener el carrito');
     }
 });
 

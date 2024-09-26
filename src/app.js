@@ -1,13 +1,13 @@
-export { io };
 import express from 'express';
-//import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import exphbs from 'express-handlebars';
-import productsRouter from './src/routes/products.router.js';
-import cartsRouter from './src/routes/carts.router.js';
-import viewsRouter from './src/routes/views.router.js';
-//import methodOverride from 'method-override';
+import productsRouter from '../src/routes/products.router.js';
+import cartsRouter from '../src/routes/carts.router.js';
+import viewsRouter from '../src/routes/views.router.js';
+import methodOverride from 'method-override';
+
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,13 +15,13 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-//mongoose.connect('mongodb+srv://proyecto1:proyect@cluster0.dc0ws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
-  //  .then(() => {
-    //    console.log('Connected to MongoDB Atlas');
-    //})
-    //.catch(err => {
-      //  console.error('Error connecting to MongoDB Atlas:', err.message);
-    //});
+mongoose.connect('mongodb+srv://proyecto1:proyect@cluster0.dc0ws.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+    .then(() => {
+        console.log('Connected to MongoDB Atlas');
+    })
+    .catch(err => {
+    console.error('Error connecting to MongoDB Atlas:', err.message);
+    });
 
 
 app.use(express.json());
