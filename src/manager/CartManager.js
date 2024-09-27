@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const filePath = path.resolve(__dirname,'src/data/carritos.json');
+const filePath = path.resolve(__dirname,'./src/data/carritos.json');
 
 let carritos = [];
 

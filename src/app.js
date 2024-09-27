@@ -9,7 +9,6 @@ import viewsRouter from '../src/routes/views.router.js';
 import methodOverride from 'method-override';
 
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -26,18 +25,12 @@ mongoose.connect('mongodb+srv://proyecto1:proyect@cluster0.dc0ws.mongodb.net/?re
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'src', 'public')));
+app.use(express.static('./src/public'));
 app.use(methodOverride('_method'));
 
-app.engine('handlebars', exphbs.engine({
-    defaultLayout: 'main',
-    runtimeOptions: {
-        allowProtoPropertiesByDefault: true,
-        allowProtoMethodsByDefault: true,
-    },
-}));
+app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', './src/views');
 
 app.use('/api/home', productsRouter)
 app.use('/api/products', productsRouter);
